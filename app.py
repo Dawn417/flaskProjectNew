@@ -9,6 +9,9 @@ import datetime
 
 app = Flask(__name__)
 
+@app.route('/hello')
+def index():
+    return 'hello world'
 
 @app.route('/alert', methods=['POST'])
 def receive_alert():
